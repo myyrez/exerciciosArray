@@ -1,23 +1,13 @@
-let palindromo = [2, 5, 4, 4, 3, 2]
-let metade1 = []
-let metade2 = []
+let numero = [9,0,3,9,3,0,9]
 
-for (let i = 2; i > palindromo.length-7; i--) {
-    metade1.push(palindromo[i])
-}
-for (let i = 5; i > palindromo.length-4; i--) {
-    metade2.push(palindromo[i])
-}
-
-let palindromo2 = metade2.concat(metade1)
-
-if (palindromo2 === palindromo) {
-    console.log('deu');
-} else {
-    console.log('n deu');
+function checarPalindromo(numero) {
+    for (let i = 0; i < numero.length; i++) {
+        if (numero[i] !== numero[numero.length-1-i]) {
+            console.log(`O número ${numero.join('')} não é um palíndromo :(`);
+            return
+        } 
+    } 
+    console.log(`O número ${numero.join('')} é um palíndromo! :)`);
 }
 
-console.log(palindromo2);
-console.log(palindromo);
-
-
+checarPalindromo(numero)
