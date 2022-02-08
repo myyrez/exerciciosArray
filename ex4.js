@@ -2,8 +2,8 @@ let doces = ['sorvete', 'chocolate', 'tortinha']
 let salgados = ['lámen', 'strogonoff', 'omelete']
 
 function intercalar(doces, salgados) {
-    var naBarriga = []
-    var total = 0
+    let naBarriga = []
+    let total = 0
     if (doces.length > salgados.length) {
         total = doces.length
     } else {
